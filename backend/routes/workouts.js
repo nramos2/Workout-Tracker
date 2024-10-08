@@ -21,7 +21,7 @@ router.post('/', createWorkout)
 //DELETE a workout 
 router.delete('/:id', deleteWorkout)
 
-//UPDATE a new workout 
+//UPDATE a single workout 
 router.patch('/:id', updateWorkout)
 
 module.exports = router
