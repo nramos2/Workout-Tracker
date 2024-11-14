@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 /* layout */
+[data-status="light"] span:nth-of-type(2) {
+  color: black;
+}
+
+[data-status="dark"] span:nth-of-type(2) {
+  color: white;
+}
+
+.App[data-status="light"]>header {
+  background: white;
+}
+
+.App[data-status="dark"]>header {
+  background: black;
+}
+
 :root {
   --primary: #1aac83;
   --error: #e7195a;

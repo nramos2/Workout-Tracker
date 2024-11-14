@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
+import ControlledSwitches from './NightModeToggle.js'
 
-const Navbar = () => {
+const Navbar = ({checked, onToggle}) => {
     return (
         <header>
-            <div className="container">
+            <div className="container" data-status={checked ? "dark" : "light"}>
                 <Link to='/'>
                     <h1>Workout Tracker</h1>
                 </Link>
+                <ControlledSwitches checked={checked} onToggle={onToggle}/>
             </div>
         </header>
     )
