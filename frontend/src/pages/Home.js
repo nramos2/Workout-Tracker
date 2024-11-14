@@ -6,7 +6,7 @@ import WorkoutDetails from '../components/WorkoutDetails.js'
 import WorkoutForm from "../components/WorkoutForm.js"
 
 const Home = () => {
-    const {workouts, dispatch} = useWorkoutsContext()
+    const { workouts, dispatch } = useWorkoutsContext()
 
     //calls function when component is rendered, not needing to reload whole page
     useEffect(() => {
@@ -16,18 +16,18 @@ const Home = () => {
 
             if (response.ok) {
                 console.log("SET_WORKOUTS")
-                dispatch({type: 'SET_WORKOUTS', payload: json}) //the payload is the workout list that is returned after creating one
+                dispatch({ type: 'SET_WORKOUTS', payload: json }) //the payload is the workout list that is returned after creating one
             } //dispatch, remember, is the workoutsReducer, we are calling it once we know that the GET worked
         }
 
         fetchWorkouts()
     }, [dispatch]/*when empty this makes sure it only fires once when it is rendered, but if something like dispatch is in it, it will rerender when that thing changes*/)
 
-    return(
+    return (
         <div className="home">
             <div className="workouts">
                 {workouts && workouts.map((workout) => ( //this checks that we have workouts in the first place, only then will we map through them
-                    <WorkoutDetails key={workout._id} workout={workout}/> 
+                    <WorkoutDetails key={workout._id} workout={workout} />
                 ))}
             </div>
             <WorkoutForm />
