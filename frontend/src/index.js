@@ -10,6 +10,6 @@ root.render(
     <WorkoutsContextProvider> { /*this makes app a child of our context, which allows us to wrap in in workoutContext.js as a child*/}
       <App />
     </WorkoutsContextProvider>
-      
+
   </React.StrictMode>
 );
