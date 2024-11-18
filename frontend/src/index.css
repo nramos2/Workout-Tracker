@@ -119,6 +119,12 @@ header a {
   color: #ffffff;
 }
 
+.App[data-status="dark"] .workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #c4c1c1;
+}
+
 /* new workout form */
 label,
 input {
