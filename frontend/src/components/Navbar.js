@@ -6,7 +6,7 @@ const Navbar = ({checked, onToggle}) => {
         <header>
             <div className="container" data-status={checked ? "dark" : "light"}>
                 <Link to='/'>
-                    <h1>Workout Tracker</h1>
+                    <h1 id='homelink'data-status={checked ? "dark" : "light"}>Workout Tracker</h1>
                 </Link>
                 <ControlledSwitches checked={checked} onToggle={onToggle}/>
             </div>

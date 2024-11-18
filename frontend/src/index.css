@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 /* layout */
+
+
+#homelink[data-status="light"]{
+  color: #333;
+  text-decoration: none;
+}
+#homelink[data-status="dark"]{
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
 [data-status="light"] span:nth-of-type(2) {
   color: black;
 }
@@ -23,7 +34,12 @@
   --error: #e7195a;
 }
 
-body {
+body:has(.App[data-status="dark"]) {
+  background: #151416;
+  margin: 0;
+  font-family: "Poppins";
+}
+body:has(.App[data-status="light"]) {
   background: #f1f1f1;
   margin: 0;
   font-family: "Poppins";
@@ -92,10 +108,49 @@ header a {
   color: #333;
 }
 
+.App[data-status="dark"] .workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #2b2a2a;
+  padding: 6px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
 /* new workout form */
 label,
 input {
   display: block;
+}
+
+.App[data-status="dark"] .create h3 {
+  color: rgb(190, 190, 190);
+}
+
+.App[data-status="dark"] .create label {
+  color: rgb(190, 190, 190);
+}
+
+.App[data-status="dark"] .create input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: darkgray;
+}
+
+.App[data-status="dark"] .workout-details {
+  background: #000000;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 input {

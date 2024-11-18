@@ -26,11 +26,11 @@ const Home = () => {
     return (
         <div className="home">
             <div className="workouts">
-                {workouts && workouts.map((workout) => ( //this checks that we have workouts in the first place, only then will we map through them
+                {workouts && workouts.map((workout) => ( //this checks that we have workouts in the first place (not null), only then will we map through them (if left of && is true, expression right of && carries out)
                     <WorkoutDetails key={workout._id} workout={workout} />
                 ))}
             </div>
-            <WorkoutForm />
+            <WorkoutForm/>
         </div>
     )
 }

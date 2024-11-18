@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route
               path='/' //default page
-              element={<Home />}
+              element={<Home checked={checked} onToggle={handleToggle}/>}
             />
           </Routes>
         </div>
